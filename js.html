@@ -7,6 +7,36 @@
     <title>Document</title>
 </head>
 <body>
-    
+安装sass前需安装ruby
+安装好ruby好打开命令行，输入
+
+gem install sass
+出现错误：
+
+ERROR: Could not find a valid gem 'sass' (>= 0), here is why:
+Unable to download data from https://rubygems.org/ - SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://api.rubygems.org/specs.4.8.gz)
+网上的解决方案是换成国内镜像https://ruby.taobao.org
+代码：
+
+gem sources --add https://ruby.taobao.org
+然而试了一下发现还是报错
+
+Error fetching https://ruby.taobao.org/:
+SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://rubygems-china.oss-cn-hangzhou.aliyuncs.com/specs.4.8.gz)
+去stackoverflow上搜索了一番，发现可以这样
+
+gem sources --add http://rubygems.org
+会提示
+
+https://rubygems.org is recommended for security over http://rubygems.org/
+忽略，现在再试试gem install sass, 成功
+
+Fetching: sass-3.4.22.gem (100%)
+Successfully installed sass-3.4.22
+Parsing documentation for sass-3.4.22
+Installing ri documentation for sass-3.4.22
+Done installing documentation for sass after 18 seconds
+1 gem installed
+
 </body>
 </html>
