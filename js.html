@@ -38,5 +38,23 @@ Installing ri documentation for sass-3.4.22
 Done installing documentation for sass after 18 seconds
 1 gem installed
 
+<p>3秒内不能重复提交</p>
+		<button onclick="myFunction()">点我</button>
+		<script type="text/javascript">
+			var submit=false;
+			function myFunction(){
+				if(!submit){
+					submit=true;
+					setTimeout(function(){
+//						alert("Hello")
+						console.log('提交成功');
+						submit=false;
+					},3000);
+				}else{
+					console.log('3秒内不能提交');
+				}
+			}
+		</script>
+
 </body>
 </html>
